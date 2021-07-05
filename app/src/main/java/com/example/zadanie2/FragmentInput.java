@@ -31,7 +31,9 @@ public class FragmentInput extends Fragment {
             @Override
             public void onClick(View v) {
                 String input = String.valueOf(editText.getText());
-
+                if (input.isEmpty()) {
+                    return;
+                }
                 SimpleTask s = new SimpleTask();
                 int[] array = s.prepareData(input);
                 if (array.length < 3) {
