@@ -3,6 +3,7 @@ package com.example.zadanie2;
 public class SimpleTask {
 
     int[] prepareData(String input) {
+        input = input.replaceAll("[^0-9,]+","");
         String[] stringArray = input.split(",");
         int size = stringArray.length;
         int[] array = new int[size];
